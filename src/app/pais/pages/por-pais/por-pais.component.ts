@@ -11,21 +11,24 @@ import { Country } from '../../interfaces/pais.interface';
 export class PorPaisComponent{
 
   termino:string = '';
-  hayError:boolean = false;
   paises: Country[] = [];
 
   constructor( private paisService: PaisService ){}
 
-  buscar(){
-    this.hayError = false;
+  buscar( pais: string ){
+    this.termino = '';
 
-    this.paisService.buscarPais(this.termino)
+    this.paisService.buscarPais(pais)
       .subscribe( (paises) => {
         this.paises = paises;
       }, (error) => {
-        this.hayError = true;
+        this.termino = pais;
         this.paises = [];
       });
+  }
+
+  sugerencias( termino: string ){
+    
   }
 
 }

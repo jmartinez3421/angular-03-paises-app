@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PaisModule } from './pais/pais.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import { PaisInputComponent } from './pais/components/pais-input/pais-input.component';
 
 @NgModule({
   declarations: [
