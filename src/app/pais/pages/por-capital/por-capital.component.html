@@ -5,6 +5,8 @@
     <app-pais-input (onEnter)="buscar($event)" (onDebounce)="sugerencias($event)" placeholder="Buscar Capital...">
     </app-pais-input>
 
+    <hr>
+
     <app-error-busqueda [termino]="termino"></app-error-busqueda>
 
     <app-pais-tabla [paises]="paises"></app-pais-tabla>

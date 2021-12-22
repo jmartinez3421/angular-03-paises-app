@@ -33,7 +33,7 @@ export class PorPaisComponent{
       .subscribe( (paises) => {
         this.paises = paises;
       }, (error) => {
-        this.termino = pais;
+        this.terminoError = pais;
         this.paises = [];
       });
   }

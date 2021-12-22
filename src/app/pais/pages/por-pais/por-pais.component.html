@@ -9,7 +9,7 @@
             </app-pais-input>
         </div>
     </div>
-    <div class="row" *ngIf="mostrarSugerencias">
+    <div class="row animate__animated animate__pulse" *ngIf="mostrarSugerencias">
         <ul clas='list-group'>
             <li class="list-group-item list-group-item-action" *ngFor="let pais of paisesSugeridos">
                 <a [routerLink]="['/pais',pais.cca2]" class="nav-link">{{pais.name.common}}</a>
