@@ -26,7 +26,7 @@ export class PorCapitalComponent{
             this.termino = capital;
             this.paises = [];
           }
-        )
+        );
   }
 
   sugerencias( termino: string ){

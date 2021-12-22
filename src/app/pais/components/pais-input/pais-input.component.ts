@@ -30,13 +30,17 @@ export class PaisInputComponent implements OnInit{
   
   buscar(){
     this.onEnter.emit(this.termino);
-
+    this.termino = '';
   }
 
   teclaPresionada(){
 
     this.debouncer.next( this.termino );
 
+  }
+
+  borrarValue(){
+    this.termino = '';
   }
 
 }

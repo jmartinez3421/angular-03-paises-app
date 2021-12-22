@@ -1,9 +1,11 @@
-<div class="row">
-    <div class="col">
+<div class="d-flex">
+    <div class="flex-grow-1">
         <form (ngSubmit)="buscar()">
             <input type="text" name='termino' [placeholder]="placeholder" class="form-control" autocomplete="off"
-                [(ngModel)]="termino" (input)="teclaPresionada()"  />
+                [(ngModel)]="termino" (input)="teclaPresionada()" />
         </form>
     </div>
+    <div>
+        <button class="btn btn-danger" (click)="borrarValue()"><i class="bi bi-trash-fill"></i></button>
+    </div>
 </div>
-<hr>

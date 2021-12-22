@@ -26,13 +26,13 @@ export class VerPaisComponent implements OnInit {
 
     this.activatedRoute.params
         .pipe( 
-          switchMap( ({idPais}) => this.paisService.getPaisPorCodigo( idPais ) ), 
-          tap( resp => console.log(resp[0]) )
+          switchMap( ({idPais}) => this.paisService.getPaisPorCodigo( idPais ) )       
         )
         .subscribe(pais => {
-          this.pais = pais[0];
-          this.traducciones = this.pais.translations;
+          this.pais = pais;
         });
+
+        // tap( resp => console.log(resp) ) Sirve para ejecutar el console log con la respuesta del switchMap
 
     // this.activatedRoute.params
     //   .subscribe(({ idPais }) => {
