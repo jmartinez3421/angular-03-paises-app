@@ -21,10 +21,12 @@ export class PaisInputComponent implements OnInit{
   ngOnInit() {
     this.debouncer
       .pipe(
-        debounceTime(500)
+        debounceTime(400)
       )
       .subscribe( valor => {
-        this.onDebounce.emit( valor );
+        if(this.termino !== ''){
+          this.onDebounce.emit( valor );
+        }
       } )
   }
   
